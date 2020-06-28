@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.0]
+
+Bumped due to dependency.
+
 ## [0.7.1]
 
 -   Fixes the Windows build with the latest Windows SDK.
