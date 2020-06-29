@@ -147,9 +147,10 @@ fn spawn_server(server_url: String) -> crate::Result<()> {
         url => url,
       }
       .to_string();
-      request
-        .respond(crate::server::asset_response(&url))
-        .expect("unable to setup response");
+      if request
+        .respond(crate::server::asset_response(&url)).is_err() {
+        println!("unable to setup response, request url:{}", url);
+      }
     }
   });
 
